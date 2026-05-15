@@ -1,55 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Підбірки фільмів</title>
+    <title>Підбірки фільмів - ЛР6</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+
     <style>
         a{
             color: yellow;
+        }
+
+        .intro-text{
+            font-size: 20px;
+            color: lightblue;
+        }
+
+        .btn{
+            margin: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
 
-<h1>Підбірки фільмів</h1>
+<h1 id="title">🎬 Підбірки фільмів</h1>
 
 <nav>
-<a href="index.html">Головна</a> |
-<a href="movies.html">Фільми</a> |
-<a href="genres.html">Жанри</a> |
-<a href="actors.html">Актори</a> |
-<a href="https://www.imdb.com" target="_blank">IMDb</a>
+    <a href="index.html">Головна</a> |
+    <a href="movies.html">Фільми</a> |
+    <a href="genres.html">Жанри</a> |
+    <a href="actors.html">Актори</a> |
+    <a href="https://www.imdb.com" target="_blank">IMDb</a>
 </nav>
 
-<p class="intro-text" style="font-size: 22px; color: lightblue;">
-<b>Підбірки фільмів</b> допоможуть знайти кіно для будь-якого настрою.
+<hr>
+
+<p class="intro-text">
+<b>Підбірки фільмів</b> допомагають знайти кіно для будь-якого настрою.
 </p>
 
-<p>
-Тут є <i>романтичні</i>, мотиваційні та атмосферні фільми.
+<p id="text">
+Тут є романтичні, мотиваційні та атмосферні фільми.
 </p>
 
 <h2>Популярні жанри</h2>
 
-<ul>
-<li>Драма</li>
-<li>Комедія</li>
-<li>Фантастика</li>
+<ul id="list">
+    <li>Драма</li>
+    <li>Комедія</li>
+    <li>Фантастика</li>
 </ul>
 
-<ol type="I">
+<hr>
 
-<li>
-<a href="genres.html">Обрати жанр</a>
-</li>
+<h2>Навігація</h2>
 
-<li>
-<a href="actors.html">Оглянути акторів</a>
-</li>
+<button class="btn" onclick="openGenres()">Жанри</button>
+<button class="btn" onclick="openActors()">Актори</button>
+<button class="btn" onclick="openMovies()">Фільми</button>
 
-</ol>
+<hr>
+
+<h2>Тиць</h2>
+
+<button class="btn" onclick="dialogWithUser()">Діалог</button>
+<button class="btn" onclick="developerInfo('Плахтій','Леся')">Про розробника</button>
+<button class="btn" onclick="compareStrings('Hello','JavaScript')">Порівняти рядки</button>
+
+<button class="btn" onclick="changeBackground()">Фон 30 сек</button>
+
+<button class="btn" onclick="changeText()">Змінити текст</button>
+
+<button class="btn" onclick="addItem()">Додати елемент</button>
+
+<button class="btn" onclick="removeItem()">Видалити елемент</button>
 
 </body>
 </html>
