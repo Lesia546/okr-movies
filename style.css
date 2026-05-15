@@ -1,0 +1,96 @@
+
+body{
+    background-color: #0b0f1a;
+    background-image: url("font.jpg");
+    background-size: cover;
+    color: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0;
+}
+
+h1{
+    color: white;
+    font-size: 42px;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* ===== H2 ===== */
+h2{
+    color: lightgreen;
+    font-size: 30px;
+}
+
+/* ===== РАМКА ДЛЯ "ФІЛЬМИ ДЛЯ ЗМІН" ===== */
+#films-title{
+    display: inline-block;
+    color: white;
+    padding: 15px 35px;
+    border: 3px solid #2f3b52;
+    background-color: rgba(15, 20, 40, 0.75);
+    border-radius: 0px;
+    margin: 20px auto;
+}
+
+/* ===== КЛАС (виконання вимоги ЛР) ===== */
+.intro-text{
+    font-size: 20px;
+    color: #b7d4ff;
+}
+
+a{
+    color: white !important;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+a:hover{
+    color: lightgreen !important;
+}
+
+table{
+    margin: auto;
+    border-collapse: collapse;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+}
+
+th{
+    background-color: #2b3448;
+    color: white;
+    padding: 15px;
+    border: 2px solid white;
+}
+
+td{
+    border: 2px solid white;
+    padding: 10px;
+}
+
+/* ===== КАРТИНКИ ===== */
+img{
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+.intro-text{
+    font-size: 20px;
+    color: #d1da79;
+    line-height: 1.6;
+    text-align: center;
+}
+ul, ol{
+    text-align: center;
+    list-style-position: inside;
+    padding: 0;
+}
+
+ul li,
+ol li{
+    color: white;
+    margin: 10px;
+}
