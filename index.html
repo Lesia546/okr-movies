@@ -7,34 +7,22 @@
 
     <script src="script.js" defer></script>
 
-    <style>
-        a{
-            color: yellow;
-        }
 
-        .intro-text{
-            font-size: 20px;
-            color: lightblue;
-        }
-
-        .btn{
-            margin: 5px;
-            padding: 8px 12px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 
 <body>
 
 <h1 id="title">🎬 Підбірки фільмів</h1>
 
-<nav>
-    <a href="index.html">Головна</a> |
-    <a href="movies.html">Фільми</a> |
-    <a href="genres.html">Жанри</a> |
-    <a href="actors.html">Актори</a> |
-    <a href="https://www.imdb.com" target="_blank">IMDb</a>
+<nav class="menu">
+    <a class="nav-btn" href="index.html">Головна</a>
+    <a class="nav-btn" href="movies.html">Фільми</a>
+    <a class="nav-btn" href="genres.html">Жанри</a>
+    <a class="nav-btn" href="actors.html">Актори</a>
+
+    <button class="nav-btn" onclick="goToIMDb()">
+        IMDb
+    </button>
 </nav>
 
 <hr>
@@ -42,6 +30,7 @@
 <p class="intro-text">
 <b>Підбірки фільмів</b> допомагають знайти кіно для будь-якого настрою.
 </p>
+<button class="btn" onclick="changeGenres()">Змінити жанри</button>
 
 <p id="text">
 Тут є романтичні, мотиваційні та атмосферні фільми.
@@ -50,34 +39,72 @@
 <h2>Популярні жанри</h2>
 
 <ul id="list">
-    <li>Драма</li>
-    <li>Комедія</li>
-    <li>Фантастика</li>
+
+    <li>
+        <a href="https://www.imdb.com/title/tt0111161/"
+           target="_blank">
+            Драма — Втеча з Шоушенка
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.imdb.com/title/tt0107048/"
+           target="_blank">
+            Комедія — День бабака
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.imdb.com/title/tt0816692/"
+           target="_blank">
+            Фантастика — Інтерстеллар
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.imdb.com/title/tt0414387/"
+           target="_blank">
+            Романтика — Гордість і упередження
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.imdb.com/title/tt0137523/"
+           target="_blank">
+            Трилер — Бійцівський клуб
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.imdb.com/title/tt1375666/"
+           target="_blank">
+            Детектив — Початок
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.imdb.com/title/tt0120737/"
+           target="_blank">
+            Фентезі — Володар перснів
+        </a>
+    </li>
+
 </ul>
-
-<hr>
-
-<h2>Навігація</h2>
-
-<button class="btn" onclick="openGenres()">Жанри</button>
-<button class="btn" onclick="openActors()">Актори</button>
-<button class="btn" onclick="openMovies()">Фільми</button>
-
 <hr>
 
 <h2>Тиць</h2>
 
 <button class="btn" onclick="dialogWithUser()">Діалог</button>
 <button class="btn" onclick="developerInfo('Плахтій','Леся')">Про розробника</button>
-<button class="btn" onclick="compareStrings('Hello','JavaScript')">Порівняти рядки</button>
-
-<button class="btn" onclick="changeBackground()">Фон 30 сек</button>
-
-<button class="btn" onclick="changeText()">Змінити текст</button>
-
-<button class="btn" onclick="addItem()">Додати елемент</button>
-
-<button class="btn" onclick="removeItem()">Видалити елемент</button>
+<button class="btn" onclick="searchMovie()">
+    Пошук фільму
+</button>
+<button class="btn" onclick="changeBackground()">
+    Змінити атмосферу
+</button>
+<button class="btn" onclick="changeText()">
+    Оновити опис сайту
+</button>
 
 </body>
 </html>

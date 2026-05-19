@@ -4,23 +4,25 @@
     <title>Фільми</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-<nav>
-<a href="index.html">Головна</a> |
-<a href="genres.html">Жанри</a> |
-<a href="actors.html">Актори</a> |
-<a href="#films">До таблиці</a>
+<nav class="menu">
+    <a class="nav-btn" href="index.html">Головна</a>
+    <a class="nav-btn" href="movies.html">Фільми</a>
+    <a class="nav-btn" href="genres.html">Жанри</a>
+    <a class="nav-btn" href="actors.html">Актори</a>
 </nav>
-
 <div class="movie-section">
 
-<h2>Весняні фільми</h2>
+    <div class="badge">TOP</div>
+
+    <h2>Весняні фільми</h2>
 
 <p>
-<span class="highlight">Добірка</span> атмосферних фільмів для затишного вечора.
+<span class="highlight">Добірка атмосферних фільмів для затишного вечора.
 </p>
 
 <div class="floating-box">
@@ -35,6 +37,15 @@
 
 </div>
 
+<h2>Ваші рекомендації</h2>
+
+<ul id="recommendations">
+
+</ul>
+<button class="btn" onclick="addItem()">Додати елемент</button>
+
+<button class="btn" onclick="removeItem()">Видалити елемент</button>
+
 <h2 id="films-title">Фільми для змін</h2>
 
 <table border="1" cellpadding="10" cellspacing="5">
@@ -47,10 +58,24 @@
 </tr>
 
 <tr>
+<td id="happinnes-time"> 117 с</td>
+<td id="dreams-time">126 с</td>
+<td id="requiem-time">102 с</td>
+<td id="days-time">95 с</td>
+</tr>
+
+<tr>
 <td><img src="happinnes.jpg" width="120" height="170"></td>
 <td><img src="dreams.jpg" width="120" height="170"></td>
 <td><img src="requiem.jpg" width="120" height="170"></td>
 <td><img src="days.jpg" width="120" height="170"></td>
+</tr>
+
+<tr>
+<td>У гонитві за щастям</td>
+<td>Куди приводять мрії</td>
+<td>Реквієм за мрією</td>
+<td>Perfect Days</td>
 </tr>
 
 <tr>
@@ -68,6 +93,9 @@
 </tr>
 
 </table>
+<button class="btn" onclick="compareMovies()">
+    Який фільм довший?
+</button>
 
 </body>
 </html>

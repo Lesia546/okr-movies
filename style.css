@@ -20,7 +20,7 @@ h1{
 
 /* ===== H2 ===== */
 h2{
-    color: lightgreen;
+    color: rgb(255, 255, 255);
     font-size: 30px;
 }
 
@@ -35,7 +35,6 @@ h2{
     margin: 20px auto;
 }
 
-/* ===== КЛАС (виконання вимоги ЛР) ===== */
 .intro-text{
     font-size: 20px;
     color: #b7d4ff;
@@ -86,7 +85,7 @@ img{
 
 .intro-text{
     font-size: 20px;
-    color: #d1da79;
+    color: #ffffff;
     line-height: 1.6;
     text-align: center;
 }
@@ -103,12 +102,12 @@ ol li{
 }
 
 .movie-section p{
-    color: #427de3;
+    color: #ffffff;
     font-style: italic;
 }
 
 .movie-section > h2{
-    color: rgb(10, 94, 10);
+    color: rgb(253, 255, 253);
     letter-spacing: 2px;
 }
 
@@ -120,13 +119,8 @@ h2 + p{
 
 .floating-box{
     float: right;
-
     width: 160px;
-
     margin-left: 10px;
-
-    transform: translateX(-450px);
-
     padding: 10px;
     background-color: #a0891673;
     color: white;
@@ -139,12 +133,12 @@ h2 + p{
 
 .highlight{
     position: relative;
-    color: lightgreen;
+    color: rgb(255, 255, 255);
     font-weight: bold;
 }
 
 .movie-section ul li:first-child{
-    color: rgb(202, 202, 23);
+    color: rgb(255, 255, 255);
     font-weight: bold;
 }
 
@@ -154,4 +148,49 @@ h2::before{
 
 h2::after{
     content: " ——";
+}
+
+.badge{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: gold;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.menu {
+    margin: 20px 0;
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 5px;
+    background-color: #ffffff;
+    color: rgb(86, 81, 81);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #59996ab3;
+    transform: scale(1.05);
+}
+
+button{
+    border: none;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+.btn{
+    display: inline-block;
+    margin: 10px;
+}
+
+#recommendations{
+    margin-bottom: 30px;
 }
