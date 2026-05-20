@@ -1,12 +1,16 @@
-<!-- actors.html -->
-
 <!DOCTYPE html>
 <html>
 
 <head>
+
     <title>Актори</title>
+
     <meta charset="UTF-8">
+
     <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+
 </head>
 
 <body>
@@ -14,68 +18,151 @@
 <h1>Відомі актори</h1>
 
 <nav class="menu">
-    <a class="nav-btn" href="index.html">Головна</a>
-    <a class="nav-btn" href="movies.html">Фільми</a>
-    <a class="nav-btn" href="genres.html">Жанри</a>
-    <a class="nav-btn" href="actors.html">Актори</a>
+
+    <a class="nav-btn" href="index.html">
+        Головна
+    </a>
+
+    <a class="nav-btn" href="movies.html">
+        Фільми
+    </a>
+
+    <a class="nav-btn" href="genres.html">
+        Жанри
+    </a>
+
+    <a class="nav-btn" href="actors.html">
+        Актори
+    </a>
+
 </nav>
 
-<ul>
+<hr>
 
-<li>
+<h2>Категорії акторів</h2>
+
+<div id="actor-menu">
+
+    <button class="btn" data-action="marvel">
+        Marvel
+    </button>
+
+    <button class="btn" data-action="drama">
+        Драматичні ролі
+    </button>
+
+    <button class="btn" data-action="fantasy">
+        Фантастика
+    </button>
+
+</div>
+
+<p id="actor-info" class="intro-text">
+
+    Оберіть категорію
+
+</p>
+<button class="btn"
+onclick="showMessage()">
+
+Цікаві факти зі світу Marvel
+
+</button>
+
+<button id="info-btn" class="btn">
+
+Показати популярного актора 
+
+</button>
+
+
+
+<hr>
+
+<h2>Популярні актори</h2>
+
+<ul id="actor-list">
+
+<li class="actor-item">
 
 <b>Tom Hiddleston</b>
 
 <br><br>
 
 <a href="hidl.jpg" target="_blank">
+
 <img src="hidl.jpg" width="200">
+
 </a>
 
 <p class="intro-text">
+
 Британський актор, найбільш відомий роллю Локі у фільмах Marvel.
 Його харизма, інтелігентність і витончена акторська гра зробили
 цього персонажа одним із найулюбленіших серед глядачів.
+
 </p>
 
 </li>
 
-<li>
+<li class="actor-item">
 
 <b>Johnny Depp</b>
 
 <br><br>
 
 <a href="depp.jpg" target="_blank">
+
 <img src="depp.jpg" width="200">
+
 </a>
 
 <p class="intro-text">
+
 Легендарний актор, який запам'ятався роллю Джека Горобця,
 Віллі Вонки та Едварда Руки-ножиці.
 Він відомий своєю харизмою та незабутніми образами.
+
 </p>
 
 </li>
 
-<li>
+<li class="actor-item">
 
 <b>Robert Downey Jr.</b>
 
 <br><br>
 
 <a href="jun.jpg" target="_blank">
+
 <img src="jun.jpg" width="200">
+
 </a>
 
 <p class="intro-text">
+
 Один із найяскравіших акторів Голлівуду,
 його талант і гумор зробили персонажа культовим.
+
 </p>
 
 </li>
 
 </ul>
+
+<hr>
+
+<button id="special-btn" class="btn">
+
+    Показати кінорекомендацію
+
+</button>
+
+<button id="remove-btn" class="btn">
+
+Не підсвічувати 
+
+</button>
 
 </body>
 </html>

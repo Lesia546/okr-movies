@@ -336,3 +336,238 @@ function searchMovie(){
             "Фільм поки не знайдено на сайті";
     }
 }
+
+
+
+
+
+let actorList =
+    document.getElementById("actor-list");
+
+function highlightActor(event){
+
+    if(event.target.closest("li")){
+
+        let actors =
+            document.querySelectorAll(
+                "#actor-list li"
+            );
+
+        actors.forEach(function(actor){
+
+            actor.classList.remove(
+                "actor-active"
+            );
+        });
+
+        event.target
+            .closest("li")
+            .classList.add(
+                "actor-active"
+            );
+    }
+}
+
+actorList.addEventListener(
+    "click",
+    highlightActor
+);
+
+let actorMenu =
+    document.getElementById("actor-menu");
+
+let actorActions = {
+
+    marvel(){
+
+        document.getElementById(
+            "actor-info"
+        ).innerHTML =
+
+            "Tom Hiddleston та Robert Downey Jr. стали відомими завдяки фільмам Marvel.";
+    },
+
+    drama(){
+
+        document.getElementById(
+            "actor-info"
+        ).innerHTML =
+
+            "Johnny Depp відомий своїми драматичними та емоційними ролями.";
+    },
+
+    fantasy(){
+
+        document.getElementById(
+            "actor-info"
+        ).innerHTML =
+
+            "Tom Hiddleston часто грає персонажів у фантастичних фільмах.";
+    }
+};
+
+actorMenu.addEventListener(
+
+    "click",
+
+    function(event){
+
+        let action =
+            event.target.dataset.action;
+
+        if(action){
+
+            actorActions[action]();
+        }
+    }
+);
+
+let specialBtn =
+    document.getElementById(
+        "special-btn"
+    );
+
+function firstHandler(){
+
+    alert(
+        "Рекомендуємо переглянути: Інтерстеллар"
+    );
+}
+
+function secondHandler(){
+
+    alert(
+        "Жанр фільму: фантастика"
+    );
+}
+
+specialBtn.addEventListener(
+    "click",
+    firstHandler
+);
+
+specialBtn.addEventListener(
+    "click",
+    secondHandler
+);
+
+
+specialBtn.addEventListener(
+    "mouseover",
+    actorHandler
+);
+
+let actorHandler = {
+
+    handleEvent(event){
+
+        alert(
+
+            "Ви навели курсор на елемент: " +
+
+            event.currentTarget.id
+        );
+    }
+};
+
+document
+    .getElementById("remove-btn")
+
+    .addEventListener(
+
+        "click",
+
+        function(){
+
+            actorList.removeEventListener(
+                "click",
+                highlightActor
+            );
+
+            alert(
+                "Вибір акторів вимкнено"
+            );
+        }
+    );
+
+function showMessage(){
+
+    alert(
+
+        "Tom Hiddleston виконав роль Локі у фільмах Marvel."
+    );
+}
+
+let infoButton =
+    document.getElementById(
+        "info-btn"
+    );
+
+infoButton.onclick = function(){
+
+    document.getElementById(
+        "actor-info"
+    ).innerHTML =
+
+        "Сьогодні найпопулярніший актор сайту: Johnny Depp";
+};
+
+document
+    .getElementById("outer-box")
+
+    .addEventListener(
+
+        "click",
+
+        function(){
+
+            alert(
+                "Відкрито розділ новин кіно"
+            );
+        }
+    );
+
+document
+    .getElementById("inner-btn")
+
+    .addEventListener(
+
+        "click",
+
+        function(){
+
+            alert(
+                "Нова прем'єра очікується цього місяця"
+            );
+        }
+    );
+
+let actorItems =
+    document.querySelectorAll(
+        ".actor-item"
+    );
+
+actorItems.forEach(function(actor){
+
+    actor.addEventListener(
+
+        "mouseover",
+
+        function(){
+
+            actor.style.transform =
+                "scale(1.02)";
+        }
+    );
+
+    actor.addEventListener(
+
+        "mouseout",
+
+        function(){
+
+            actor.style.transform =
+                "scale(1)";
+        }
+    );
+});
