@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>Жанри</title>
+
     <meta charset="UTF-8">
+
     <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+
 </head>
 
 <body>
@@ -11,58 +18,163 @@
 <h1>Жанри фільмів</h1>
 
 <nav class="menu">
-    <a class="nav-btn" href="index.html">Головна</a>
-    <a class="nav-btn" href="movies.html">Фільми</a>
-    <a class="nav-btn" href="genres.html">Жанри</a>
-    <a class="nav-btn" href="actors.html">Актори</a>
+
+    <a class="nav-btn" href="index.html">
+        Головна
+    </a>
+
+    <a class="nav-btn" href="movies.html">
+        Фільми
+    </a>
+
+    <a class="nav-btn" href="genres.html">
+        Жанри
+    </a>
+
+    <a class="nav-btn" href="actors.html">
+        Актори
+    </a>
+
 </nav>
 
-<div id="outer-box">
+<hr>
 
-    <button id="inner-btn" class="btn">
+<h2>Популярні жанри</h2>
 
-        Дізнатися про прем'єру 
+<div id="genres-container">
 
-    </button>
+    <a
+        class="genre-card"
+        href="https://www.imdb.com/search/title/?genres=drama"
+        target="_blank"
+    >
+        Драма
+    </a>
+
+    <a
+        class="genre-card"
+        href="https://www.imdb.com/search/title/?genres=sci-fi"
+        target="_blank"
+    >
+        Фантастика
+    </a>
+
+    <a
+        class="genre-card"
+        href="https://www.imdb.com/search/title/?genres=romance"
+        target="_blank"
+    >
+        Романтика
+    </a>
+
+    <a
+        class="genre-card"
+        href="https://www.imdb.com/search/title/?genres=mystery"
+        target="_blank"
+    >
+        Детектив
+    </a>
 
 </div>
 
+<hr>
+<h2>Перетягни фільм у добірку</h2>
+
+<div id="movies-zone">
+
+    <div
+        id="movie1"
+        class="movie-card"
+        data-title="В погоні за щастям"
+    >
+        В погоні за щастям
+    </div>
+
+    <div
+        id="movie2"
+        class="movie-card"
+        data-title="Реквієм за мрією"
+    >
+        Реквієм за мрією
+    </div>
+
+    <div
+        id="movie3"
+        class="movie-card"
+        data-title="Perfect Days"
+    >
+        Perfect Days
+    </div>
+
+</div>
+
+<div id="favorites-box">
+
+    <h3>Улюблена добірка</h3>
+
+    <ul id="favorites-list">
+
+    </ul>
+
+</div>
+
+<hr>
+
 <table border="1" cellpadding="10" cellspacing="5">
 
-<caption><b>Підбірка фільмів</b></caption>
+<caption>
+
+<b>Підбірка фільмів</b>
+
+</caption>
 
 <tr>
-<th>Настрій</th>
-<th>Фільм 1</th>
-<th>Фільм 2</th>
-<th>Фільм 3</th>
+
+    <th>Настрій</th>
+
+    <th>Фільм 1</th>
+
+    <th>Фільм 2</th>
+
+    <th>Фільм 3</th>
+
 </tr>
 
 <tr>
-<td rowspan="2">Мотивація</td>
-<td>В погоні за щастям</td>
-<td>Форрест Ґамп</td>
-<td>Perfect Days</td>
+
+    <td rowspan="2">
+        Мотивація
+    </td>
+
+    <td>
+        В погоні за щастям
+    </td>
+
+    <td>
+        Форрест Ґамп
+    </td>
+
+    <td>
+        Perfect Days
+    </td>
+
 </tr>
 
 <tr>
-<td colspan="2">Реквієм за мрією</td>
-<td>Товариство мертвих поетів</td>
+
+    <td colspan="2">
+        Реквієм за мрією
+    </td>
+
+    <td>
+        Товариство мертвих поетів
+    </td>
+
 </tr>
-
-<h2>Весняні фільми</h2>
-
-<ul>
-
-<li>Амелі</li>
-
-<li>Таємничий сад</li>
-
-<li>Гордість і упередження</li>
-
-</ul>
 
 </table>
 
 </body>
 </html>
+
+

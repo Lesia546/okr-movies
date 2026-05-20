@@ -457,117 +457,128 @@ specialBtn.addEventListener(
     actorHandler
 );
 
-let actorHandler = {
 
-    handleEvent(event){
-
-        alert(
-
-            "Ви навели курсор на елемент: " +
-
-            event.currentTarget.id
-        );
-    }
-};
-
-document
-    .getElementById("remove-btn")
-
-    .addEventListener(
-
-        "click",
-
-        function(){
-
-            actorList.removeEventListener(
-                "click",
-                highlightActor
-            );
-
-            alert(
-                "Вибір акторів вимкнено"
-            );
-        }
-    );
-
-function showMessage(){
-
-    alert(
-
-        "Tom Hiddleston виконав роль Локі у фільмах Marvel."
-    );
-}
-
-let infoButton =
-    document.getElementById(
-        "info-btn"
-    );
-
-infoButton.onclick = function(){
-
-    document.getElementById(
-        "actor-info"
-    ).innerHTML =
-
-        "Сьогодні найпопулярніший актор сайту: Johnny Depp";
-};
-
-document
-    .getElementById("outer-box")
-
-    .addEventListener(
-
-        "click",
-
-        function(){
-
-            alert(
-                "Відкрито розділ новин кіно"
-            );
-        }
-    );
-
-document
-    .getElementById("inner-btn")
-
-    .addEventListener(
-
-        "click",
-
-        function(){
-
-            alert(
-                "Нова прем'єра очікується цього місяця"
-            );
-        }
-    );
-
-let actorItems =
+let movies =
     document.querySelectorAll(
-        ".actor-item"
+        ".movie-card"
     );
 
-actorItems.forEach(function(actor){
+let favoritesBox =
+    document.getElementById(
+        "favorites-box"
+    );
 
-    actor.addEventListener(
+let favoritesList =
+    document.getElementById(
+        "favorites-list"
+    );
+
+let currentMovie = null;
+
+let shiftX = 0;
+let shiftY = 0;
+
+movies.forEach(function(movie){
+
+    movie.addEventListener(
+
+        "mousedown",
+
+        function(event){
+
+            currentMovie = movie;
+
+            shiftX = event.offsetX;
+            shiftY = event.offsetY;
+
+            movie.style.position =
+                "absolute";
+
+            movie.style.zIndex =
+                "1000";
+
+            movie.style.cursor =
+                "grabbing";
+        }
+    );
+
+    movie.addEventListener(
 
         "mouseover",
 
-        function(){
+        function(event){
 
-            actor.style.transform =
-                "scale(1.02)";
+            event.target.style.color =
+                "gold";
         }
     );
 
-    actor.addEventListener(
+    movie.addEventListener(
 
         "mouseout",
 
-        function(){
+        function(event){
 
-            actor.style.transform =
-                "scale(1)";
+            event.target.style.color =
+                "white";
         }
     );
 });
+
+document.addEventListener(
+
+    "mousemove",
+
+    function(event){
+
+        if(currentMovie){
+
+            currentMovie.style.left =
+                event.pageX - shiftX + "px";
+
+            currentMovie.style.top =
+                event.pageY - shiftY + "px";
+        }
+    }
+);
+
+document.addEventListener(
+
+    "mouseup",
+
+    function(event){
+
+        if(currentMovie){
+
+            let box =
+                favoritesBox.getBoundingClientRect();
+
+            if(
+
+                event.clientX > box.left &&
+                event.clientX < box.right &&
+                event.clientY > box.top &&
+                event.clientY < box.bottom
+
+            ){
+
+                let li =
+                    document.createElement("li");
+
+                li.textContent =
+                    currentMovie.dataset.title;
+
+                favoritesList.append(li);
+
+                alert(
+                    "Фільм додано у добірку"
+                );
+            }
+
+            currentMovie.style.cursor =
+                "grab";
+
+            currentMovie = null;
+        }
+    }
+);
