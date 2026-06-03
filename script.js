@@ -128,6 +128,7 @@ function dialogWithUser(){
             name +
             ", рекомендуємо:\n";
 
+            
         for(
             let i = 0;
             i < recommendations.length;
